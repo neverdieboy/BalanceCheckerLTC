@@ -13,7 +13,7 @@ class ProxyController:
       timesUsed : int = 0
       
       @classmethod
-      def get_proxies(self) -> list:
+      def get_proxies(self) -> str:
             if self.timesUsed == 2:
                   self.nextIndex += 1
                   self.timesUsed = 0
@@ -59,7 +59,7 @@ class WalletGenerator:
 
 class RequestGenerator():
       @staticmethod
-      def make_request(data : dict, proxy):
+      def make_request(data : dict, proxy : str):
             adresses = data["Adresses"]
             for i in adresses.items():
                   url = "https://litecoin.atomicwallet.io/address/" + i[1]
