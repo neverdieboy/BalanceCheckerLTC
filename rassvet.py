@@ -52,14 +52,14 @@ class WalletObj:
             return t
 
 class WalletGenerator:
-      @classmethod
-      def createWallets(self) -> dict:
+      @staticmethod
+      def createWallets() -> dict:
             w = WalletObj()
             return w.walletData
 
 class RequestGenerator():
-      @classmethod
-      def make_request(self, data : dict, proxy):
+      @staticmethod
+      def make_request(data : dict, proxy):
             adresses = data["Adresses"]
             for i in adresses.items():
                   url = "https://litecoin.atomicwallet.io/address/" + i[1]
@@ -75,14 +75,14 @@ class RequestGenerator():
 
 
 class BalanceChecker():
-      @classmethod
-      def check_balance(self, input) ->  bool:
+      @staticmethod
+      def check_balance(input) ->  bool:
             if input != "0 LTC":
                   return True
 
 class FileWriter():
-      @classmethod
-      def write_to_file(self, addrType : str, addres : str, privateKey : str, wif: str, bal: str) -> None:
+      @staticmethod
+      def write_to_file(addrType : str, addres : str, privateKey : str, wif: str, bal: str) -> None:
             with open("wifData.txt", "a") as file:
                   file.write(f"\n\nPrivKey: {privateKey}")
                   file.write(f"\nWIF: {wif}")
