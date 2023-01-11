@@ -98,5 +98,5 @@ def main():
             RequestGenerator.make_request(WalletGenerator.createWallets(), ProxyController.get_proxies())
             b += 1
 
-init()
+
 init(main())
