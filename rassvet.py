@@ -59,7 +59,7 @@ class WalletGenerator:
 
 class RequestGenerator():
       @staticmethod
-      def make_request(data : dict, proxy : str):
+      def make_request(data : dict, proxy : str) -> None:
             adresses = data["Adresses"]
             for i in adresses.items():
                   url = "https://litecoin.atomicwallet.io/address/" + i[1]
