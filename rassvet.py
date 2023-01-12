@@ -5,8 +5,8 @@ from colorama import init
 from lxml import html
 from requests import get
 from colorama import Fore
-from WalletObj import WalletObj
-from netModule import ProxyController
+from walletobj import WalletObj
+from netmodule import ProxyController
 
 
 class WalletGenerator:
